@@ -1,15 +1,17 @@
 # log_analyzer
 
-A Python tool for analyzing web server logs in Common Log Format (CLF) or JSON. Parses entries, filters by time, scores severity (LOW/MED/HIGH) for security insights (e.g., SQLi, errors, large POSTs), and generates summaries with top IPs, paths, statuses, and bytes. Run via CLI: `python3 -m log_analyzer.cli --file logs/access.log --json`.
+Minimal Python log analyzer that supports Common Log Format (CLF) and JSON lines.
 
-## Installation
+Usage examples
+
+Run the example included:
+
 ```bash
-git clone https://github.com/yourusername/log_analyzer.git
-cd log_analyzer
-pip install -e .
+ python3 -m log_analyzer.cli --file sample_logs/access.log --json
 ```
 
-## Usage
+CLI usage:
+
 ```bash
-python3 -m log_analyzer.run_example
+python3 -m log_analyzer.cli --file sample_logs/access.log --json
 ```
